@@ -1,0 +1,42 @@
+{
+  "name": "website",
+  "description": "The website for FRC team 404 Not Found, the ARGS Robotics Team",
+  "version": "1.0.0",
+  "author": "Zachary Collazo",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/mdx": "^0.15.2",
+    "@astrojs/partytown": "^1.0.3",
+    "@astrojs/react": "^2.1.0",
+    "@astrojs/tailwind": "^3.0.0",
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "accessible-astro-components": "^1.6.4",
+    "astro": "^2.0.1",
+    "astro-compress": "1.1.28",
+    "astro-icon": "^0.7.3",
+    "eslint": "^8.33.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "prettier": "^2.8.3",
+    "prettier-plugin-astro": "^0.8.0",
+    "prettier-plugin-tailwindcss": "^0.2.2",
+    "sass": "^1.49.9",
+    "svgo": "^2.8.0",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "@react-spring/parallax": "^9.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-responsive": "^9.0.2"
+  }
+}
