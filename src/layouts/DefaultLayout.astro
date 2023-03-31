@@ -53,6 +53,7 @@ const {
           document.body.classList.add("darkmode")
           localStorage.setItem("darkMode", "enabled")
         } else {
+          document.body.classList.remove("darkmode")
           localStorage.setItem("darkMode", null)
         }
       }

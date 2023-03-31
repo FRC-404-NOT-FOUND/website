@@ -23,10 +23,11 @@ const calculateStartEnd = (lg: boolean, start: number, end: number) => {
 
 const HomeParallax = () => {
   const lg = useMediaQuery({ minWidth: 1024 })
+  const dark = useMediaQuery({ query: "(prefers-color-scheme: dark)" })
   return (
     <Parallax pages={6}>
       <ParallaxLayer offset={0} speed={1.5}>
-        <Hero />
+        <Hero src={dark ? "hero-dark.png" : "hero-light.png"} />
       </ParallaxLayer>
       <ParallaxLayer offset={0.5} speed={2.5} sticky={{ start: 1, end: lg ? 5 : 1.5 }}>
         <Float>

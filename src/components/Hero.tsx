@@ -1,6 +1,7 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 
-const Hero = ({ src = 'hero.png' }) => {
+const Hero = ({ src = 'hero-light.png' }) => {
   return (
     <section className="hero mb-24 mt-16">
       <div className="container">
