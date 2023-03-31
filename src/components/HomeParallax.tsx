@@ -40,7 +40,7 @@ const HomeParallax = () => {
           </Feature>
         </Float>
       </ParallaxLayer>
-      <ParallaxLayer offset={1} speed={1} sticky={calculateStartEnd(lg, 1.5, 2 )}>
+      <ParallaxLayer offset={1} speed={1} sticky={calculateStartEnd(lg, 1.5, 2)}>
         <Float dir="right">
           <Feature icon={MdInfo} title="Our History">
             <a href="/about/history" className="flex items-center">
