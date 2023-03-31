@@ -1,13 +1,14 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import HomeParallax from '../components/HomeParallax'
-import Counter from '../components/Counter.astro'
-import ContentMedia from '../components/ContentMedia.astro'
-import { Icon } from 'astro-icon'
+import StaticPage from '../components/StaticPage'
 ---
 
 <DefaultLayout noFooter title="Home">
   <HomeParallax client:only />
+  <noscript>
+    <StaticPage />
+  </noscript>
   <style lang="scss">
     @use '../assets/styles/base/breakpoint' as *;
 

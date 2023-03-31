@@ -4,21 +4,21 @@
 
 .button {
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.33rem 1rem;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  color: var(--neutral-900);
-  background-color: var(--primary-100);
-  border: 3px solid var(--primary-100);
+  color: var(--neutral-200);
+  background-color: var(--primary-200);
+  border: 3px solid var(--primary-200);
   border-radius: var(--radius-large);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
   &:hover,
   &:focus {
-    text-decoration: underline;
-    background-color: var(--primary-200);
-    border-color: var(--primary-200);
+    background-color: var(--primary-300);
+    border-color: var(--primary-300);
+    cursor: pointer;
   }
 
   &:visited {
@@ -37,8 +37,8 @@
   }
 
   &.color-neutral {
-    background-color: var(--neutral-500);
-    border-color: (var(--neutral-500));
+    background-color: var(--neutral-600);
+    border-color: (var(--neutral-600));
 
     &:hover,
     &:focus {
@@ -140,6 +140,17 @@
   }
 }
 
-.darkmode .button.type-secondary {
-  color: var(--neutral-100);
+.darkmode .button {
+  background-color: var(--secondary-200);
+  border: 3px solid var(--secondary-200);
+
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-300);
+    border-color: var(--secondary-300);
+  }
+
+  &.type-secondary {
+    color: var(--neutral-100);
+  }
 }

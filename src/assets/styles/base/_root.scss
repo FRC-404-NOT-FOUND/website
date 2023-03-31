@@ -5,6 +5,149 @@
 @use "color" as *;
 
 :root {
+  --gray-50: #f3f2f2; 
+  --gray-100: #e7e4e4; 
+  --gray-200: #cecaca; 
+  --gray-300: #b6afaf; 
+  --gray-400: #9e9494; 
+  --gray-500: #857a7a; 
+  --gray-600: #6b6161; 
+  --gray-700: #504949; 
+  --gray-800: #353131; 
+  --gray-900: #1b1818; 
+  
+  --red-50: #ffe5e5; 
+  --red-100: #ffcccc; 
+  --red-200: #ff9999; 
+  --red-300: #ff6666; 
+  --red-400: #ff3333; 
+  --red-500: #ff0000; 
+  --red-600: #cc0000; 
+  --red-700: #990000; 
+  --red-800: #660000; 
+  --red-900: #330000; 
+  
+  --orange-50: #fff2e5; 
+  --orange-100: #ffe6cc; 
+  --orange-200: #ffcc99; 
+  --orange-300: #ffb366; 
+  --orange-400: #ff9933; 
+  --orange-500: #ff8000; 
+  --orange-600: #cc6600; 
+  --orange-700: #994c00; 
+  --orange-800: #663300; 
+  --orange-900: #331a00; 
+  
+  --yellow-50: #ffffe5; 
+  --yellow-100: #ffffcc; 
+  --yellow-200: #ffff99; 
+  --yellow-300: #ffff66; 
+  --yellow-400: #ffff33; 
+  --yellow-500: #ffff00; 
+  --yellow-600: #cccc00; 
+  --yellow-700: #999900; 
+  --yellow-800: #666600; 
+  --yellow-900: #333300; 
+  
+  --lime-50: #f2ffe5; 
+  --lime-100: #e6ffcc; 
+  --lime-200: #ccff99; 
+  --lime-300: #b3ff66; 
+  --lime-400: #99ff33; 
+  --lime-500: #80ff00; 
+  --lime-600: #66cc00; 
+  --lime-700: #4d9900; 
+  --lime-800: #336600; 
+  --lime-900: #1a3300; 
+  
+  --green-50: #e5ffe5; 
+  --green-100: #ccffcc; 
+  --green-200: #99ff99; 
+  --green-300: #66ff66; 
+  --green-400: #33ff33; 
+  --green-500: #00ff00; 
+  --green-600: #00cc00; 
+  --green-700: #009900; 
+  --green-800: #006600; 
+  --green-900: #003300; 
+  
+  --teal-50: #e5fff2; 
+  --teal-100: #ccffe6; 
+  --teal-200: #99ffcc; 
+  --teal-300: #66ffb3; 
+  --teal-400: #33ff99; 
+  --teal-500: #00ff80; 
+  --teal-600: #00cc66; 
+  --teal-700: #00994d; 
+  --teal-800: #006633; 
+  --teal-900: #00331a; 
+  
+  --cyan-50: #e5ffff; 
+  --cyan-100: #ccffff; 
+  --cyan-200: #99ffff; 
+  --cyan-300: #66ffff; 
+  --cyan-400: #33ffff; 
+  --cyan-500: #00ffff; 
+  --cyan-600: #00cccc; 
+  --cyan-700: #009999; 
+  --cyan-800: #006666; 
+  --cyan-900: #003333; 
+  
+  --blue-50: #e5f2ff; 
+  --blue-100: #cce5ff; 
+  --blue-200: #99ccff; 
+  --blue-300: #66b2ff; 
+  --blue-400: #3399ff; 
+  --blue-500: #007fff; 
+  --blue-600: #0066cc; 
+  --blue-700: #004c99; 
+  --blue-800: #003366; 
+  --blue-900: #001933; 
+  
+  --indigo-50: #e5e5ff; 
+  --indigo-100: #ccccff; 
+  --indigo-200: #9999ff; 
+  --indigo-300: #6666ff; 
+  --indigo-400: #3333ff; 
+  --indigo-500: #0000ff; 
+  --indigo-600: #0000cc; 
+  --indigo-700: #000099; 
+  --indigo-800: #000066; 
+  --indigo-900: #000033; 
+  
+  --violet-50: #f2e5ff; 
+  --violet-100: #e5ccff; 
+  --violet-200: #cc99ff; 
+  --violet-300: #b266ff; 
+  --violet-400: #9933ff; 
+  --violet-500: #7f00ff; 
+  --violet-600: #6600cc; 
+  --violet-700: #4c0099; 
+  --violet-800: #330066; 
+  --violet-900: #190033; 
+  
+  --purple-50: #ffe5ff; 
+  --purple-100: #ffccff; 
+  --purple-200: #ff99ff; 
+  --purple-300: #ff66ff; 
+  --purple-400: #ff33ff; 
+  --purple-500: #ff00ff; 
+  --purple-600: #cc00cc; 
+  --purple-700: #990099; 
+  --purple-800: #660066; 
+  --purple-900: #330033; 
+  
+  --pink-50: #ffe5f2; 
+  --pink-100: #ffcce6; 
+  --pink-200: #ff99cc; 
+  --pink-300: #ff66b3; 
+  --pink-400: #ff3399; 
+  --pink-500: #ff0080; 
+  --pink-600: #cc0066; 
+  --pink-700: #99004d; 
+  --pink-800: #660033; 
+  --pink-900: #33001a;
+
   @each $color, $shades in $colors {
     @each $shade, $value in $shades {
       --#{$color}-#{$shade}: #{$value};

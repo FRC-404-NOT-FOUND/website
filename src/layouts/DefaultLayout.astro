@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 const {
   title = 'FRC Team 404',
-  description = 'The ARGS Robotics FRC Team 404: Not Found, from Appomattox Regional Governo\'rs School',
+  description = 'The ARGS Robotics FRC Team 404 Not Found, from Appomattox Regional Governor\'s School',
   url = Astro.url.href,
   image = '/social-preview-image.png',
   author = 'The ARGS Robotics Team',
@@ -36,8 +36,8 @@ const {
     <main id="main-content">
       <slot />
     </main>
-    {!noFooter && <Footer client:visible />}
-    <script>
+    {!noFooter && <Footer />}
+    <script rel="preload">
       const dark = window.matchMedia("(prefers-color-scheme: dark)")
 
       if (dark.matches) {
@@ -70,7 +70,7 @@ const {
         // light theme
         --font-color: var(--neutral-900);
         --action-color: var(--primary-300);
-        --action-color-state: var(--primary-500);
+        --action-color-state: var(--primary-400);
         --background: var(--neutral-100);
         --primary-background: var(--primary-100);
         --neutral-background: var(--neutral-200);
@@ -80,7 +80,7 @@ const {
       .darkmode {
         --font-color: var(--neutral-100);
         --action-color: var(--secondary-100);
-        --action-color-state: var(--secondary-500);
+        --action-color-state: var(--secondary-300);
         --background: var(--dark-100);
         --primary-background: var(--primary-500);
         --neutral-background: var(--neutral-900);
