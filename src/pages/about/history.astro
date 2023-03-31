@@ -1,0 +1,90 @@
+---
+import { MdStar } from "react-icons/md";
+import Feature from "../../components/Feature";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import ImageGallery from "../../components/ImageGallery";
+---
+<DefaultLayout title="History">
+  <div class="container">
+    <h1 class="mb-8">Our History</h1>
+    <div class="mb-10">
+      <h2 class="mb-4 text-gradient w-max">How it Started</h2>
+      <p class="text-xl">
+        In 1999, six students came together and created a First Robotics Team for the Appomattox Reigonal Governor's School.
+      </p>
+    </div>
+    <div class="flex flex-col items-center md:grid md:grid-cols-2 gap-8 mb-10">
+      <Feature title="1999">
+        <p>
+          At the turn of the new millenium, under the supervision of Mr. Roland Cabanos, six students banded together and created the new FIRST Robotics team:
+          <b>Team 404: Flamin&apos; Dragons</b>
+        </p>
+      </Feature>
+      <img alt="The Flamin' Dragons logo" src="/flamin-dragons/flamin-dragons.png" class="rounded-lg m-auto" />
+    </div>
+    <div class="flex flex-col-reverse items-center md:grid md:grid-cols-2 gap-8 mb-10">
+      <img alt="The sign at NASA Langley" src="/flamin-dragons/nasa-langley.png" class="rounded-lg m-auto" />
+      <Feature title="2000-2005">
+        <p>
+          <b>The Flamin&apos; Dragons</b> head to their annual competitions at NASA Langley! 
+          <blockquote>404, baby.</blockquote>
+        </p>
+      </Feature>
+    </div>
+    <div class="flex flex-col items-center md:grid md:grid-cols-2 gap-8 mb-10">
+      <Feature title="Accomplishments">
+        <ul class="list-disc pl-2">
+          <li><b>2000</b> - The first robot, Inferno (first slide), won the Featherweight in the Finals award!</li>
+          <li><b>2004</b> - The Flamin' Dragons move on up to the World Championships for the first time.</li>
+          <li><b>2005</b> - Now rebranded Distant Rage, the team goes up to the world stage, with the robot Victoria! (second slide)</li>
+        </ul>
+      </Feature>
+      <ImageGallery client:load prefix="/flamin-dragons" images={["inferno.png", "victoria.png", "404-sign.png", "ball-testing.png", "robot-testing.png", "working-robot.png", "working-robot-02.png"]} />
+    </div>
+    <div class="mb-10">
+      <h2 class="mb-4 text-gradient w-max">After 2005</h2>
+      <p class="text-xl">
+        Mr. Cabanos unfortunately left ARGS, leaving the students without a sponsor for the robotics team for the forseeable future.
+        <b>Thus, the team disbanded.</b>
+      </p>
+    </div>
+    <div class="mb-10">
+      <h2 class="mb-4 text-gradient w-max">Nine Years Later</h2>
+      <p class="text-xl">
+        In 2014, a group of students, captivated by the idea of an <b>ARGS Robotics Team</b>, banded together to rekindle the flame.
+        <b>This was their innovation.</b>
+      </p>
+    </div>
+    <div class="flex flex-col items-center md:grid md:grid-cols-2 gap-8 mb-10">
+      <Feature title="2015">
+        <p>
+          These students named themselves A.R.T. - ARGS Robotics Team - and developed a new gear logo.
+          Despite it being their first year, they won the Rookie All Star Award, advanced to World Championships, and placed 67th globally!
+        </p>
+      </Feature>
+      <ImageGallery client:load prefix="/5546" images={["team.png", "robot.png", "gears.png", "art.png"]} />
+    </div>
+    <div class="flex flex-col-reverse items-center md:grid lg:grid-cols-2 gap-8 mb-10">
+      <video src="/5546/starry-knight.mp4" controls class="rounded-lg" />
+      <Feature title="2016">
+        <p><i>Behold our robot: <b>Starry Knight</b>!</i></p>
+        <blockquote>Because nerds need this much power.</blockquote>
+      </Feature>
+    </div>
+    <div class="flex flex-col items-center md:grid lg:grid-cols-2 gap-8 mb-10">
+      <Feature title="Accomplishments">
+        <ul class="list-disc pl-2">
+          <li>Won the Creativity Award sponsored by Xerox</li>
+          <li>District event winner</li>
+          <li>Judge&apos;s Award winner</li>
+          <li>District Championship Points Qualifying Team winner (2x)</li>
+          <li>Advanced to World Championships, placed 19th globally</li>
+        </ul>
+      </Feature>
+      <ImageGallery client:load prefix="/5546" images={["starry-knight.png", "comp.png", "scouting.png", "comp-fix.png"]} />
+    </div>
+  </div>
+  <style lang="scss">
+    @use "../../assets/styles/components/feature";
+  </style>
+</DefaultLayout>
