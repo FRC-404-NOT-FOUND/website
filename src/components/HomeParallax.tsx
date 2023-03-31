@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Hero from "./Hero"
 import Feature from "./Feature"
-import { MdChevronRight, MdInfo } from "react-icons/md"
+import { MdChevronRight, MdInfo } from "react-icons/md/index"
 import Footer from "./Footer";
 import { useMediaQuery } from "react-responsive";
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { MdInfo, MdChevronRight } from "react-icons/md";
+import { MdInfo, MdChevronRight } from "react-icons/md/index";
 import Feature from "./Feature";
 import Footer from "./Footer";
 import Hero from "./Hero";

@@ -33,7 +33,7 @@ const {
   </head>
   <body>
     <Header />
-    <main class={!noFooter && "mb-10"} id="main-content">
+    <main class={noFooter ? "" : "mb-10"} id="main-content">
       <slot />
     </main>
     {!noFooter && <Footer />}
