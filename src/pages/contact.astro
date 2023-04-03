@@ -1,0 +1,37 @@
+---
+import DefaultLayout from "layouts/DefaultLayout.astro";
+import { FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+---
+<DefaultLayout title="Contact Us">
+  <div class="container">
+    <h1 class="mb-8">Contact Us</h1>
+    <div class="flex flex-col gap-6 lg:grid lg:grid-cols-2 items-center">
+      <div class="flex flex-col gap-6 text-2xl">
+        <div class="flex gap-4 items-center">
+          <MdEmail size={40} style={{ color: "var(--action-color)" }} />
+          <a href="mailto:robotics@args.us">Email us: robotics@args.us</a>
+        </div>
+        <div class="flex gap-4 items-center">
+          <FaInstagram size={40} style={{ color: "var(--action-color)" }} />
+          <a href="https://instagram.com/frc_404">Instagram: frc_404</a>
+        </div>
+        <div class="flex gap-4 items-center">
+          <FaMapMarkerAlt size={40} style={{ color: "var(--action-color)" }} />
+          <a href="https://www.google.com/maps/place/512+W+Washington+St,+Petersburg,+VA+23803/">512 W. Washington Street Petersburg VA, 23803</a>
+        </div>
+      </div>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.9280675699038!2d-77.41165800000002!3d37.225682500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b1a670b65a2c75%3A0x5ac4241b925f4c6a!2s512%20W%20Washington%20St%2C%20Petersburg%2C%20VA%2023803!5e0!3m2!1sen!2sus!4v1680561775741!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="rounded-lg" />
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

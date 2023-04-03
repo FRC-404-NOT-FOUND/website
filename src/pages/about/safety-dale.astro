@@ -1,0 +1,33 @@
+---
+import Feature from "components/Feature";
+import DefaultLayout from "layouts/DefaultLayout.astro";
+import { FaHeadphones } from "react-icons/fa";
+import { MdWarning } from "react-icons/md";
+---
+<DefaultLayout title="Safety Dale">
+  <div class="container">
+    <h1 class="mb-8">Safety Dale</h1>
+    <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 mb-10">
+      <Feature icon={MdWarning} title="Our Commitment to Safety">
+        <p>
+          The purpose of our robotics team is to learn applicable skills, make new friends, and have fun.
+          Safety Dale gives us a fun way to express our care for wise use of tools and technology in a way
+          that will help people to remember to be safe and <b>use protection</b>.
+        </p>
+      </Feature>
+      <img alt="Safety Dale" src="/safety-dale-2.png" class="rounded-lg m-auto max-w-lg w-full" />
+    </div>
+    <div class="flex flex-col md:grid md:grid-cols-2 gap-8">
+      <img alt="Danger Dan" src="/danger-dan.png" class="rounded-lg m-auto max-w-lg w-full" />
+      <Feature icon={FaHeadphones} title="Safety Dale's Legacy">
+        <p>
+          Safety Dale's origins reach back to the 2019-2020 robotics competition.
+          He is constructed of a foam ball from the game, workshop headphones, a paper mustache, and sick shades.
+          He was made by ARGS alumnus Raleigh Norris, who in a jolt of creativity gave us our most iconic team member.
+          His purpose is to promote precautionary measures and the use of safety materials.
+          His arch-nemesis is Danger Dan... the embodiment of hazard and risk.
+        </p>
+      </Feature>
+    </div>
+  </div>
+</DefaultLayout>

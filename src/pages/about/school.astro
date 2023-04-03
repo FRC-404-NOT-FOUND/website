@@ -1,0 +1,31 @@
+---
+import Feature from "@components/Feature";
+import DefaultLayout from "layouts/DefaultLayout.astro";
+import { FaRobot, FaSchool } from "react-icons/fa";
+---
+<DefaultLayout title="School">
+  <div class="container">
+    <h1 class="mb-8">School</h1>
+    <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 mb-10">
+      <Feature icon={FaSchool} title="ARGS">
+        <p>
+          Team 404 hails from the Appomattox Regional Governor&apos;s School for the Arts and Technology in Petersburg, VA.
+          We are a magnet school, pulling students from 14 different counties in the surrounding Virginia area for any of six different focus areas:
+          Music, Theatre, Dance, Visual Arts, Literary Arts, and Technology.
+        </p><br>
+        <a href="https://args.us/">Check us out</a>
+      </Feature>
+      <img alt="The Appomattox Regional Governor's School for the Arts and Technology" src="/args.jpeg" class="rounded-lg m-auto max-w-lg w-full" />
+    </div>
+    <div class="flex flex-col md:grid md:grid-cols-2 gap-8 mb-10">
+      <div class="flex justify-center items-center w-full h-full rounded-lg m-auto max-w-lg bg-[var(--neutral-600)] dark:bg-[var(--neutral-700)]">Awesome placeholder</div>
+      <Feature icon={FaRobot} title="Our Team">
+        <p>
+          The ARGS Robotics Team was started by tech majors, but we have many students
+          from other majors who help out in every area. For example, our PR department is comprised mainly of visual arts students.
+          Having students from all of these different backgrounds allows for creativity and unity in ways that only having tech-oriented minds never could.
+        </p>
+      </Feature>
+    </div>
+  </div>
+</DefaultLayout>
