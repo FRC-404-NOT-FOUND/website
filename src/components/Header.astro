@@ -1,7 +1,7 @@
 ---
-import Navigation from '../components/Navigation.astro'
-import { SkipLinks } from 'accessible-astro-components'
-import { Icon } from 'astro-icon'
+import Navigation from 'components/Navigation.astro';
+import { SkipLinks } from 'accessible-astro-components';
+import { FaGithub } from 'react-icons/fa/index';
 ---
 
 <header>
@@ -60,7 +60,7 @@ import { Icon } from 'astro-icon'
     </li>
     <li class="menu-item type-icon">
       <a href="https://github.com/FRC-404-NOT-FOUND/website" title="View this website on GitHub">
-        <Icon pack="ion" name="logo-github" />
+        <FaGithub className="react-icon" />
       </a>
     </li>
   </Navigation>
@@ -73,9 +73,10 @@ import { Icon } from 'astro-icon'
     .type-icon a {
       display: block;
 
-      [astro-icon] {
+      .react-icon {
         margin-top: -4px;
         width: 30px;
+        height: 30px;
 
         path {
           fill: var(--action-color);
@@ -84,7 +85,7 @@ import { Icon } from 'astro-icon'
       }
 
       &:hover {
-        [astro-icon] path {
+        .react-icon path {
           fill: var(--action-color-state);
         }
       }

@@ -1,12 +1,11 @@
 ---
-import ResponsiveToggle from './ResponsiveToggle.astro'
-import { DarkMode } from 'accessible-astro-components'
+import ResponsiveToggle from 'components/ResponsiveToggle.astro';
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
     <a href="/" class="flex items-center gap-2 !no-underline">
-      <img src="/logo.png" alt="Artie, the ARGS Robotics dragon" width="36" />
+      <img width="36" height="36" src="/logo.png" alt="Artie, the ARGS Robotics dragon" />
       <span class="font-bold text-lg">ARGS Robotics</span>
     </a>
     <div class="wrapper">
@@ -27,7 +26,7 @@ import { DarkMode } from 'accessible-astro-components'
 
 <script>
   // variables
-  const mainNav = document.querySelector('#main-navigation')
+  const mainNav = document.querySelector('#main-navigation')!
   const mainMenu = mainNav.querySelector('ul')
   const dropdownMenus = [...document.querySelectorAll('.has-dropdown button')]
 
@@ -53,7 +52,7 @@ import { DarkMode } from 'accessible-astro-components'
 
   const checkMenuSize = () => {
     const mainNavWidth = mainNav.getBoundingClientRect().width
-    const desktopMenuWidth = document.querySelector('.desktop-menu').getBoundingClientRect().width
+    const desktopMenuWidth = document.querySelector('.desktop-menu')!.getBoundingClientRect().width
     const logoWidthBuffer = 300
     const totalMenuWidth = Math.round(desktopMenuWidth) + logoWidthBuffer
 
@@ -66,13 +65,13 @@ import { DarkMode } from 'accessible-astro-components'
     }
   }
 
-  const isOutOfViewport = (element) => {
+  const isOutOfViewport = (element: Element) => {
     const elementBounds = element.getBoundingClientRect()
     return elementBounds.right > (window.innerWidth || document.documentElement.clientWidth)
   }
 
-  const openDropdownMenu = (dropdownMenu) => {
-    const dropdownList = dropdownMenu.parentNode.querySelector('ul')
+  const openDropdownMenu = (dropdownMenu: Element) => {
+    const dropdownList = dropdownMenu.parentNode!.querySelector('ul')!
 
     dropdownMenu.classList.add('show')
     dropdownMenu.setAttribute('aria-expanded', 'true')
@@ -82,7 +81,7 @@ import { DarkMode } from 'accessible-astro-components'
     }
   }
 
-  const closeDropdownMenu = (dropdownMenu) => {
+  const closeDropdownMenu = (dropdownMenu: Element) => {
     dropdownMenu.classList.remove('show')
     dropdownMenu.setAttribute('aria-expanded', 'false')
   }
@@ -93,12 +92,12 @@ import { DarkMode } from 'accessible-astro-components'
     }
   }
 
-  const toggleDropdownMenu = (event) => {
-    if (event.target.getAttribute('aria-expanded') === 'false') {
+  const toggleDropdownMenu = (event: Event) => {
+    if ((event.target as Element).getAttribute('aria-expanded') === 'false') {
       closeAllDropdownMenus()
-      openDropdownMenu(event.target)
+      openDropdownMenu(event.target as Element)
     } else {
-      closeDropdownMenu(event.target)
+      closeDropdownMenu(event.target as Element)
     }
   }
 
@@ -106,7 +105,7 @@ import { DarkMode } from 'accessible-astro-components'
   mainMenu &&
     mainMenu.addEventListener('keydown', (event) => {
       const element = event.target as Element
-      const currentMenuItem = element.closest('li')
+      const currentMenuItem = element.closest('li')!
       const menuItems = [...mainMenu.querySelectorAll('.menu-item')]
       const currentDropdownMenu = element.closest('.has-dropdown button')
       const currentDropdownMenuItem = element.closest('.has-dropdown li')
@@ -136,7 +135,7 @@ import { DarkMode } from 'accessible-astro-components'
       }
 
       if (currentDropdownMenu) {
-        const firstDropdownItem = currentDropdownMenu.nextElementSibling.querySelector('li')
+        const firstDropdownItem = currentDropdownMenu.nextElementSibling?.querySelector('li')
 
         if (key === 'ArrowDown') {
           event.preventDefault()
@@ -150,7 +149,7 @@ import { DarkMode } from 'accessible-astro-components'
       }
 
       if (currentDropdownMenuItem) {
-        const currentDropdownList = currentDropdownMenuItem.parentNode
+        const currentDropdownList = currentDropdownMenuItem.parentNode!
         const dropdownMenuItems = [...currentDropdownList.querySelectorAll('li')]
         const currentIndex = dropdownMenuItems.findIndex((item) => item === currentDropdownMenuItem)
 
@@ -176,13 +175,13 @@ import { DarkMode } from 'accessible-astro-components'
 
         if (key === 'Escape') {
           const currentDropdownMenu = (currentDropdownList as Element).previousElementSibling
-          targetItem = currentDropdownMenu.parentNode
+          targetItem = currentDropdownMenu!.parentNode
           closeAllDropdownMenus()
         }
       }
 
       if (targetItem) {
-        targetItem.querySelector('a, button, input').focus()
+        (targetItem.querySelector('a, button, input') as HTMLElement).focus()
       }
     })
 
@@ -222,10 +221,6 @@ import { DarkMode } from 'accessible-astro-components'
 
       .mobile-menu {
         display: none;
-      }
-
-      .darkmode-toggle {
-        margin-top: -6px;
       }
     }
 
@@ -369,36 +364,6 @@ import { DarkMode } from 'accessible-astro-components'
         background-color: var(--neutral-background);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         border-radius: var(--radius-large);
-      }
-    }
-  }
-
-  .darkmode-toggle {
-    padding: 0;
-    border: none;
-
-    svg {
-      width: 30px;
-      margin-top: 4px;
-    }
-
-    svg path {
-      fill: var(--action-color);
-      transition: fill 0.2s ease-in-out;
-    }
-
-    &:hover {
-      svg path {
-        fill: var(--action-color-state);
-      }
-    }
-
-    &:focus {
-      @include outline;
-
-      &:not(:focus-visible) {
-        outline: none;
-        box-shadow: none;
       }
     }
   }

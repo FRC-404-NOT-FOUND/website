@@ -1,8 +1,8 @@
 ---
-import '../assets/styles/globals.scss'
-import SiteMeta from '../components/SiteMeta.astro'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer'
+import 'assets/styles/globals.scss';
+import SiteMeta from 'components/SiteMeta.astro';
+import Header from 'components/Header.astro';
+import Footer from 'components/Footer';
 
 const {
   title = 'FRC Team 404',
@@ -10,8 +10,8 @@ const {
   url = Astro.url.href,
   image = '/social-preview-image.png',
   author = 'The ARGS Robotics Team',
-  noFooter = false
-} = Astro.props
+  noFooter = false,
+} = Astro.props;
 ---
 
 <html lang="en" dir="ltr">
@@ -33,31 +33,10 @@ const {
   </head>
   <body>
     <Header />
-    <main class={noFooter ? "" : "mb-10"} id="main-content">
+    <main class={noFooter ? '' : 'mb-10'} id="main-content">
       <slot />
     </main>
     {!noFooter && <Footer />}
-    <script rel="preload">
-      const dark = window.matchMedia("(prefers-color-scheme: dark)")
-
-      if (dark.matches) {
-        document.body.classList.add("darkmode")
-        localStorage.setItem("darkMode", "enabled")
-      } else {
-        localStorage.setItem("darkMode", null)
-      }
-
-      dark.onchange = () => {
-        const newDark = window.matchMedia("(prefers-color-scheme: dark")
-        if (newDark.matches) {
-          document.body.classList.add("darkmode")
-          localStorage.setItem("darkMode", "enabled")
-        } else {
-          document.body.classList.remove("darkmode")
-          localStorage.setItem("darkMode", null)
-        }
-      }
-    </script>
     <style lang="scss" is:global>
       // theme settings
       :root {
@@ -77,13 +56,15 @@ const {
       }
 
       // dark color scheme overrides
-      .darkmode {
-        --font-color: var(--neutral-100);
-        --action-color: var(--secondary-100);
-        --action-color-state: var(--secondary-300);
-        --background: var(--dark-100);
-        --primary-background: var(--primary-500);
-        --neutral-background: var(--neutral-900);
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --font-color: var(--neutral-100);
+          --action-color: var(--violet-200);
+          --action-color-state: var(--violet-400);
+          --background: var(--dark-100);
+          --primary-background: var(--primary-500);
+          --neutral-background: var(--neutral-900);
+        }
       }
 
       // sticky footer on low content pages

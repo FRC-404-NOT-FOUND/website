@@ -35,15 +35,17 @@ blockquote{
   }
 }
 
-.darkmode blockquote {
-  background:var(--neutral-900);
-  color: var(--neutral-300);
-  
-  &::before {
-    color: var(--secondary-400);
-  }
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    background:var(--neutral-900);
+    color: var(--neutral-300);
+    
+    &::before {
+      color: var(--secondary-400);
+    }
 
-  span {
-    color: var(--neutral-200);
+    span {
+      color: var(--neutral-200);
+    }
   }
 }

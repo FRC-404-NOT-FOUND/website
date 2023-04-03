@@ -1,15 +1,12 @@
 ---
-import DefaultLayout from '../layouts/DefaultLayout.astro'
-import HomeParallax from '../components/HomeParallax'
-import StaticPage from '../components/StaticPage'
+import DefaultLayout from 'layouts/DefaultLayout.astro';
+import StaticPage from 'components/StaticPage';
+import HomePage from 'components/HomePage';
 ---
 
 <DefaultLayout noFooter title="Home">
-  <HomeParallax client:only />
+  <HomePage client:media="(min-width: 1024px)" />
   <noscript>
     <StaticPage />
   </noscript>
-  <style lang="scss">
-    @use "../assets/styles/components/feature";
-  </style>
 </DefaultLayout>

@@ -134,23 +134,25 @@
     align-items: center;
     gap: 0.5rem;
 
-    [astro-icon] {
+    .react-icon {
       width: 30px;
     }
   }
 }
 
-.darkmode .button {
-  background-color: var(--secondary-200);
-  border: 3px solid var(--secondary-200);
+@media (prefers-color-scheme: dark) {
+  .button {
+    background-color: var(--secondary-200);
+    border: 3px solid var(--secondary-200);
 
-  &:hover,
-  &:focus {
-    background-color: var(--secondary-300);
-    border-color: var(--secondary-300);
-  }
+    &:hover,
+    &:focus {
+      background-color: var(--secondary-300);
+      border-color: var(--secondary-300);
+    }
 
-  &.type-secondary {
-    color: var(--neutral-100);
+    &.type-secondary {
+      color: var(--neutral-100);
+    }
   }
 }

@@ -5,9 +5,11 @@
   -webkit-text-fill-color: transparent;
 }
 
-:global(.darkmode .text-gradient) {
-  background: linear-gradient(315deg, var(--primary-300) 25%, var(--secondary-300));
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+@media (prefers-color-scheme: dark) {
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-300) 25%, var(--secondary-300));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

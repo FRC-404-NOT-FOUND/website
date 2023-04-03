@@ -1,0 +1,5 @@
+.eslintrc.js
+astro.config.mjs
+tailwind.config.cjs
+node_modules
+dist

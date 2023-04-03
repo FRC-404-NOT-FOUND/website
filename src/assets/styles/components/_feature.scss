@@ -35,14 +35,16 @@
     border-radius: 1rem;
     z-index: 0;
   }
+
+  .react-icon {
+    width: 4rem;
+    color: var(--action-color);
+  }
 }
 
-:global(.feature .react-icon) {
-  width: 4rem;
-  color: var(--action-color);
-}
-
-:global(.darkmode .feature::before) {
-  background-color: var(--dark-100);
-  box-shadow: 0 0 0 6px var(--dark-100);
+@media (prefers-color-scheme: dark) {
+  .feature::before {
+    background-color: var(--dark-100);
+    box-shadow: 0 0 0 6px var(--dark-100);
+  }
 }
