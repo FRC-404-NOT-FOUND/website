@@ -1,0 +1,16 @@
+---
+import DefaultLayout from "layouts/DefaultLayout.astro";
+---
+<DefaultLayout title="Events">
+  <div class="container">
+    <h1 class="mb-8">Events</h1>
+    <!-- 
+      Once Salas makes the calendar public, replace iframe URL with:
+      https://open-web-calendar.hosted.quelltext.eu/calendar.html?url=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Fical%2Fc_fa86ad1c3f04173928178d272467fcbba9b5160e0fdb37c5e9a97a5473b47e23%40group.calendar.google.com%2Fpublic%2Fbasic.ics&amp;starting_hour=0&amp;ending_hour=24&amp;hour_division=1&amp;css=.event%2C%20.dhx_cal_tab.active%2C%20.dhx_cal_tab.active%3Ahover%20%7Bbackground-color%3A%20Open%20Web%20Calendar%3B%7D%20.dhx_month_head%2C%20.dhx_cal_tab%2C%20.dhx_cal_today_button%20%7Bcolor%3A%20Open%20Web%20Calendar%3B%7D%20.dhx_cal_tab%2C%20.dhx_cal_tab.active%20%7Bborder-color%3A%20Open%20Web%20Calendar%3B%7D%0A&amp;loader=
+    -->
+    <iframe id="open-web-calendar" class="rounded-lg"
+      src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?url=https%3A%2F%2Fwww.calendarlabs.com%2Fical-calendar%2Fics%2F46%2FGermany_Holidays.ics&amp;starting_hour=0&amp;ending_hour=24&amp;hour_division=1&amp;css=.event%2C%20.dhx_cal_tab.active%2C%20.dhx_cal_tab.active%3Ahover%20%7Bbackground-color%3A%20Open%20Web%20Calendar%3B%7D%20.dhx_month_head%2C%20.dhx_cal_tab%2C%20.dhx_cal_today_button%20%7Bcolor%3A%20Open%20Web%20Calendar%3B%7D%20.dhx_cal_tab%2C%20.dhx_cal_tab.active%20%7Bborder-color%3A%20Open%20Web%20Calendar%3B%7D%0A&amp;loader="
+      sandbox="allow-scripts allow-same-origin allow-top-navigation"
+      height="600px" width="100%"></iframe>
+  </div>
+</DefaultLayout>
