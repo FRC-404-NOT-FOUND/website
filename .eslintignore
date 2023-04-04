@@ -1,5 +1,5 @@
 .eslintrc.cjs
-astro.config.js
+astro.config.mjs
 tailwind.config.cjs
 commitlint.config.cjs
 node_modules

@@ -1,7 +1,7 @@
 ---
-import Feature from "components/Feature";
-import DefaultLayout from "layouts/DefaultLayout.astro";
-import ImageGallery from "components/ImageGallery";
+import Feature from 'components/Feature';
+import DefaultLayout from 'layouts/DefaultLayout.astro';
+import ImageGallery from 'components/ImageGallery';
 ---
 <DefaultLayout title="History">
   <div class="container">
@@ -38,7 +38,7 @@ import ImageGallery from "components/ImageGallery";
           <li><b>2005</b> - Now rebranded Distant Rage, the team goes up to the world stage, with the robot Victoria! (second slide)</li>
         </ul>
       </Feature>
-      <ImageGallery client:load prefix="/flamin-dragons" images={["inferno.png", "victoria.png", "404-sign.png", "ball-testing.png", "robot-testing.png", "working-robot.png", "working-robot-02.png"]} />
+      <ImageGallery client:load prefix="/flamin-dragons" images={['inferno.png', 'victoria.png', '404-sign.png', 'ball-testing.png', 'robot-testing.png', 'working-robot.png', 'working-robot-02.png']} />
     </div>
     <div class="mb-10">
       <h2 class="mb-4 text-gradient w-max">After 2005</h2>
@@ -61,7 +61,7 @@ import ImageGallery from "components/ImageGallery";
           Despite it being their first year, they won the Rookie All Star Award, advanced to World Championships, and placed 67th globally!
         </p>
       </Feature>
-      <ImageGallery client:load prefix="/5546" images={["team.png", "robot.png", "gears.png", "art.png"]} />
+      <ImageGallery client:load prefix="/5546" images={['team.png', 'robot.png', 'gears.png', 'art.png']} />
     </div>
     <div class="flex flex-col-reverse items-center md:grid lg:grid-cols-2 gap-8 mb-10">
       <video src="/5546/starry-knight.mp4" controls class="rounded-lg" />
@@ -80,7 +80,7 @@ import ImageGallery from "components/ImageGallery";
           <li>Advanced to World Championships, placed 19th globally</li>
         </ul>
       </Feature>
-      <ImageGallery client:load prefix="/5546" images={["starry-knight.png", "comp.png", "scouting.png", "comp-fix.png"]} />
+      <ImageGallery client:load prefix="/5546" images={['starry-knight.png', 'comp.png', 'scouting.png', 'comp-fix.png']} />
     </div>
   </div>
 </DefaultLayout>

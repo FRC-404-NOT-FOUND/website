@@ -10,5 +10,5 @@ import robotsTxt from 'astro-robots-txt';
 export default defineConfig({
   site: 'https://argsrobotics-beta.netlify.app',
   integrations: [compress(), mdx(), tailwind(), react(), sitemap(), robotsTxt()],
-  trailingSlash: true,
+  trailingSlash: 'always',
 });

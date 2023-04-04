@@ -110,5 +110,5 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
   "include": ["**/*.tsx", "**/*.astro", "**/*.mjs", "**/*.js", "**/*.ts"],
-  "exclude": ["node_modules/**/*", "dist/**/*", "astro.config.js", "tailwind.config.cjs", ".eslintrc.cjs", "commitlint.config.cjs"]
+  "exclude": ["node_modules/**/*", "dist/**/*", ".eslintrc.cjs", "astro.config.mjs"]
 }

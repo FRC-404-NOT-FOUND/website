@@ -9,7 +9,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "lint": "eslint -c .eslintrc.cjs src/**/*.{astro,ts,tsx,js,mjs} --no-error-on-unmatched-pattern",
+    "lint": "eslint -c .eslintrc.cjs src/**/* --no-error-on-unmatched-pattern",
     "prepare": "husky install"
   },
   "devDependencies": {
