@@ -1,5 +1,6 @@
-.eslintrc.js
-astro.config.mjs
+.eslintrc.cjs
+astro.config.js
 tailwind.config.cjs
+commitlint.config.cjs
 node_modules
 dist
