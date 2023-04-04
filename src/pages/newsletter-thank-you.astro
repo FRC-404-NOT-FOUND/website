@@ -1,6 +1,6 @@
 ---
-import DefaultLayout from "layouts/DefaultLayout.astro";
-import { MdChevronRight } from "react-icons/md";
+import DefaultLayout from 'layouts/DefaultLayout.astro';
+import { MdChevronRight } from 'react-icons/md';
 
 const email = new URL(Astro.request.url).searchParams.get('email');
 if (!email) {
