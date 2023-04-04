@@ -41,7 +41,7 @@ const StaticPage = () => {
         <form action="/newsletter-signup" className="p-6 w-full flex flex-col gap-5 items-center justify-start">
           <label className="text-3xl font-bold text-gradient" htmlFor="newsletter">Sign up for our Newsletter</label>
           <div className="flex flex-row gap-3 w-full items-center justify-center">
-            <input className="px-2 py-2 rounded-lg w-1/2 focus:outline-none text-black focus:ring ring-offset-1 ring-red-700 dark:ring-violet-500" name="newsletter" placeholder="Email" />
+            <input type="email" className="px-2 py-2 rounded-lg w-1/2 focus:outline-none text-black focus:ring ring-offset-1 ring-red-700 dark:ring-violet-500" name="email" placeholder="Email" />
             <input className="button" type="submit" value="Sign Up" />
           </div>
         </form>

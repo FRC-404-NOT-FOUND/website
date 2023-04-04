@@ -1,0 +1,16 @@
+---
+import DefaultLayout from "layouts/DefaultLayout.astro";
+import { MdChevronRight } from "react-icons/md";
+
+const email = new URL(Astro.request.url).searchParams.get('email');
+if (!email) {
+  return Astro.redirect('/');
+}
+---
+<DefaultLayout title="Thank You">
+  <div class="container">
+    <h1 class="mb-8 text-gradient w-max">Thank you!</h1>
+    <h2 class="mb-4">Your support is not lost on us.</h2>
+    <a class="flex items-center gap-2" href="/">Go back home <MdChevronRight size={24} /></a>
+  </div>
+</DefaultLayout>

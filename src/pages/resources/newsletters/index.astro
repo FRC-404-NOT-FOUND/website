@@ -1,0 +1,27 @@
+---
+import Feature from "@components/Feature";
+import DefaultLayout from "layouts/DefaultLayout.astro";
+---
+<DefaultLayout title="Newsletters">
+  <div class="container">
+    <h1 class="mb-8">Newsletters</h1>
+    <div class="w-96 flex items-center justify-center min-w-full mb-8 max-w-full h-96 max-h-full rounded-lg dark:bg-[var(--neutral-700)] bg-[var(--neutral-600)]">
+      We&apos;ll put recent editions of the newsletter here.
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+      <Feature title="Archive">
+        <a href="/resources/newsletters/archive">Check out old editions of our newsletter.</a>
+      </Feature>
+      <Feature title="Sponsor Letter">
+        <a href="/2022-2023-sponsor-letter.pdf">Check out our sponsor letter for the 2022-2023 season.</a>
+      </Feature>
+    </div>
+    <form action="/newsletter-signup" class="w-full flex flex-col gap-5 items-center justify-start">
+      <label class="text-3xl font-bold text-gradient" for="newsletter">Sign up for our Newsletter</label>
+      <div class="flex flex-row gap-3 w-full items-center justify-center">
+        <input type="email" class="px-2 py-2 rounded-lg w-1/2 focus:outline-none text-black focus:ring ring-offset-1 ring-red-700 dark:ring-violet-500" name="email" placeholder="Email" />
+        <input class="button" type="submit" value="Sign Up" />
+      </div>
+    </form>
+  </div>
+</DefaultLayout>

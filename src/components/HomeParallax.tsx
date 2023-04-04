@@ -29,7 +29,7 @@ const HomeParallax = () => {
       <ParallaxLayer offset={0} speed={2.5}>
         <Hero />
       </ParallaxLayer>
-      <ParallaxLayer offset={0.5} speed={2} sticky={{ start: 1, end: lg ? 5 : 1.5 }}>
+      <ParallaxLayer offset={0.5} speed={2} sticky={{ start: 0.9, end: lg ? 5 : 1.5 }}>
         <Float>
           <Feature icon={MdInfo} title="About Us">
               <a href="/about" className="flex items-center">
@@ -49,7 +49,7 @@ const HomeParallax = () => {
           </Feature>
         </Float>
       </ParallaxLayer>
-      <ParallaxLayer offset={1} speed={1} sticky={calculateStartEnd(lg, 2.5, 3 )}>
+      <ParallaxLayer offset={2} speed={1} sticky={calculateStartEnd(lg, 2.5, 3 )}>
         <Float dir="right">
           <Feature icon={MdInfo} title="Meet The Team">
             <a href="/about/team" className="flex items-center">
@@ -59,7 +59,7 @@ const HomeParallax = () => {
           </Feature>
         </Float>
       </ParallaxLayer>
-      <ParallaxLayer offset={1} speed={1} sticky={calculateStartEnd(lg, 3.5, 4 )}>
+      <ParallaxLayer offset={3} speed={1} sticky={calculateStartEnd(lg, 3.5, 4 )}>
         <Float dir="right">
           <Feature icon={MdInfo} title="Meet our Safety Mascot">
             <a href="/about/safety-dale" className="flex items-center">
@@ -69,7 +69,7 @@ const HomeParallax = () => {
           </Feature>
         </Float>
       </ParallaxLayer>
-      <ParallaxLayer offset={1} speed={1} sticky={calculateStartEnd(lg, 4.5, 5 )}>
+      <ParallaxLayer offset={4} speed={1} sticky={calculateStartEnd(lg, 4.5, 5 )}>
         <Float dir="right">
           <Feature icon={MdInfo} title="School">
             <a href="/about/school" className="flex items-center">
@@ -83,12 +83,12 @@ const HomeParallax = () => {
         <form action="/newsletter-signup" className="p-6 w-full flex flex-col gap-5 items-center justify-start">
           <label className="text-3xl font-bold text-gradient" htmlFor="newsletter">Sign up for our Newsletter</label>
           <div className="flex w-1/2 flex-row gap-3 items-center justify-center">
-            <input className="px-2 py-2 focus:outline-none w-full rounded-lg text-black focus:ring ring-offset-1 ring-red-700 dark:ring-violet-500" name="newsletter" placeholder="Email" />
+            <input type="email" className="px-2 py-2 focus:outline-none w-full rounded-lg text-black focus:ring ring-offset-1 ring-red-700 dark:ring-violet-500" name="email" placeholder="Email" />
             <input className="button" type="submit" value="Sign Up" />
           </div>
         </form>
       </ParallaxLayer>
-      <ParallaxLayer offset={6} speed={1} sticky={calculateStartEnd(lg, 6, 6.5)}>
+      <ParallaxLayer offset={5} speed={1} sticky={calculateStartEnd(lg, 6, 6.5)}>
         <div className="h-full absolute bottom-0 top-[60%] left-0 right-0">
           <Footer />
         </div>
