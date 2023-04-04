@@ -2,7 +2,7 @@
 // | Lists
 // | -------------------------------------------------------------
 
-@use 'breakpoint' as *;
+@use '../base/breakpoint' as *;
 
 ul:not([class]),
 ol:not([class]) {

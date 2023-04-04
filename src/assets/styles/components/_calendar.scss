@@ -1,0 +1,43 @@
+.calendar {
+  a {
+    text-decoration: none !important;
+
+    &.fc-daygrid-day-number {
+      color: var(--font-color);
+      &:hover {
+        color: var(--font-color);
+      }
+    }
+
+    &.fc-col-header-cell-cushion:hover {
+      color: var(--action-color)
+    }
+  }
+
+  .fc-day-today {
+    background-color: var(--neutral-400) !important;
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--neutral-900) !important;
+    }
+  }
+}
+
+:root {
+  --fc-button-bg-color: var(--primary-200);
+  --fc-button-border-color: var(--primary-200);
+  --fc-button-text-color: var(--neutral-100);
+  --fc-button-hover-bg-color: var(--primary-300);
+  --fc-button-hover-border-color: var(--primary-300);
+  --fc-button-active-bg-color: var(--primary-300);
+  --fc-button-active-border-color: var(--primary-300);
+
+  @media (prefers-color-scheme: dark) {
+    --fc-button-bg-color: var(--secondary-200);
+    --fc-button-border-color: var(--secondary-200);
+    --fc-button-text-color: var(--neutral-100);
+    --fc-button-hover-bg-color: var(--secondary-300);
+    --fc-button-hover-border-color: var(--secondary-300);
+    --fc-button-active-bg-color: var(--secondary-300);
+    --fc-button-active-border-color: var(--secondary-300);
+  }
+}
