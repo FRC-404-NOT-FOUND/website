@@ -33,13 +33,13 @@ import ResponsiveToggle from 'components/ResponsiveToggle.astro';
   // functions
   const setActiveMenuItem = () => {
     const mobileDesktopMenus = mainNav.querySelectorAll('nav > ul')
-    const currenPathname = window.location.pathname
+    const currenPathname = window.location.pathname.replace('/', '')
 
     mobileDesktopMenus.forEach((menu) => {
       const menuItems = [...menu.querySelectorAll('a:not([rel*="external"])')] as HTMLAnchorElement[]
 
       menuItems.forEach((menuItem) => {
-        if (currenPathname.includes(menuItem.pathname.replaceAll('/', '')) && menuItem.textContent !== 'Home') {
+        if (currenPathname.toLocaleLowerCase() === menuItem.pathname.replace('/', '') && menuItem.textContent !== 'Home') {
           menuItem.classList.add('is-active')
           menuItem.setAttribute('aria-current', 'page')
         } else if (menuItem.textContent === 'Home' && currenPathname === '/') {

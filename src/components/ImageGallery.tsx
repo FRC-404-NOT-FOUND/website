@@ -1,4 +1,4 @@
-import { Navigation, Pagination, A11y, EffectCoverflow } from 'swiper';
+import { Navigation, Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -9,8 +9,7 @@ import 'swiper/css/a11y';
 const ImageGallery = ({ images = [], prefix = '' }: { images?: string[], prefix?: string }) => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, A11y, EffectCoverflow]}
-      effect="coverflow"
+      modules={[Navigation, Pagination, A11y]}
       className="w-full h-full align-center bg-[var(--dark-100)]"
       navigation
       centeredSlides
