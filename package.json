@@ -31,6 +31,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.0",
+    "lint-staged": "^13.2.1",
     "prettier": "^2.8.3",
     "prettier-plugin-astro": "^0.8.0",
     "prettier-plugin-tailwindcss": "^0.2.2",
@@ -53,5 +54,8 @@
     "react-icons": "^4.8.0",
     "react-responsive": "^9.0.2",
     "swiper": "^9.2.0"
+  },
+  "lint-staged": {
+    "src/**/*": "eslint -c .eslintrc.cjs --no-error-on-unmatched-pattern --fix"
   }
 }
