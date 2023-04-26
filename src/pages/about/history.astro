@@ -2,6 +2,7 @@
 import Feature from 'components/Feature';
 import DefaultLayout from 'layouts/DefaultLayout.astro';
 import ImageGallery from 'components/ImageGallery';
+import { FaChevronRight } from 'react-icons/fa';
 ---
 <DefaultLayout title="History">
   <div class="container">
@@ -38,7 +39,7 @@ import ImageGallery from 'components/ImageGallery';
           <li><b>2005</b> - Now rebranded Distant Rage, the team goes up to the world stage, with the robot Victoria! (second slide)</li>
         </ul>
       </Feature>
-      <ImageGallery maxHeight="24rem" client:load prefix="/flamin-dragons" images={['inferno.png', 'victoria.png', '404-sign.png', 'ball-testing.png', 'robot-testing.png', 'working-robot.png', 'working-robot-02.png']} />
+      <ImageGallery client:load prefix="/flamin-dragons" images={['inferno.png', 'victoria.png', '404-sign.png', 'ball-testing.png', 'robot-testing.png', 'working-robot.png', 'working-robot-02.png']} />
     </div>
     <div class="mb-10">
       <h2 class="mb-4 text-gradient w-max">After 2005</h2>
@@ -58,10 +59,10 @@ import ImageGallery from 'components/ImageGallery';
       <Feature title="2015">
         <p>
           These students named themselves A.R.T. - ARGS Robotics Team - and developed a new gear logo.
-          Despite it being their first year, they won the Rookie All Star Award, advanced to World Championships, and placed 67th globally!
+          Despite it being their first year, they won the Rookie All Star Award, advanced to World Championships, and placed 67th in our championship division!
         </p>
       </Feature>
-      <ImageGallery maxHeight="24rem" client:load prefix="/5546" images={['team.png', 'robot.png', 'gears.png', 'art.png']} />
+      <ImageGallery client:load prefix="/5546" images={['team.png', 'robot.png', 'gears.png', 'art.png']} />
     </div>
     <div class="flex flex-col-reverse items-center md:grid lg:grid-cols-2 gap-8 mb-10">
       <video src="/5546/starry-knight.mp4" controls class="rounded-lg" />
@@ -77,10 +78,86 @@ import ImageGallery from 'components/ImageGallery';
           <li>District event winner</li>
           <li>Judge&apos;s Award winner</li>
           <li>District Championship Points Qualifying Team winner (2x)</li>
-          <li>Advanced to World Championships, placed 19th globally</li>
+          <li>Advanced to World Championships and placed 19th in our championship division.</li>
         </ul>
       </Feature>
-      <ImageGallery maxHeight="24rem" client:load prefix="/5546" images={['starry-knight.png', 'comp.png', 'scouting.png', 'comp-fix.png']} />
+      <ImageGallery client:load prefix="/5546" images={['starry-knight.png', 'comp.png', 'scouting.png', 'comp-fix.png']} />
+    </div>
+    <div class="flex flex-col-reverse items-center md:grid lg:grid-cols-2 gap-8 mb-10">
+      <div class="flex justify-center items-center">
+        <img alt="Our 2017 robot, ART.2.D.2" class="max-h-96" height="690" src="/5546/2017-bot.jpeg" />
+      </div>
+      <Feature title="2017">
+        <p>
+          Our 2017 robot, named ART.2.D.2, was designed for the FIRST STEAMWORKS game. Sadly, however, it did not make it past regional stage.
+          However, it did win the <b>Innovation in Control Award sponsored by Rockwell Automation.</b>
+        </p>
+        <a href="https://youtu.be/Bq6M8Boc_ZE" class="flex items-center gap-2">You can check the robot out on YouTube. <FaChevronRight /></a>
+      </Feature>
+    </div>
+    <div class="flex flex-col items-center md:grid lg:grid-cols-2 gap-8 mb-10">
+      <Feature title="2018">
+        <p>
+          Our 2018 robot, Ella Vader, was designed for the FIRST Power Up game. We again made it all the way to the World Championship again,
+          winning eighth in the Chesapeake district and 36th in our Championship division. We also won the <b>Quality Award sponsored by Motorola Solutions Foundation</b>.
+        </p>
+      </Feature>
+      <div class="flex justify-center items-center">
+        <img alt="Our 2018 robot, Ella Vader" class="max-h-96" height="846" src="/5546/2018-bot.jpeg" />
+      </div>
+    </div>
+    <div class="flex flex-col-reverse items-center md:grid lg:grid-cols-2 gap-8 mb-10">
+      <div class="flex justify-center items-center">
+        <img alt="Our 2019 robot" class="max-h-96" height="783" src="/5546/2019-bot.jpeg" />
+      </div>
+      <Feature title="2019">
+        <p>
+          Our 2019 robot was designed for the Destination: Deep Space game.
+          We made it to the Chesapeake District Championship, where we placed 31st. We won the
+          <b>Safety Award sponsored by Underwriter&apos;s Laboratories <i>twice</i></b>, along with the
+          <b>District Engineering Inspiration Award</b>.
+        </p>
+        <a href="https://youtu.be/fXDP6mDPetk" class="flex items-center gap-2">You can check the robot out on YouTube. <FaChevronRight /></a>
+      </Feature>
+    </div>
+    <div class="mb-10">
+      <h2 class="mb-4 text-gradient w-max">The COVID years</h2>
+      <p class="text-xl">
+        During the 2020-2021 robotics seasons, we were unable to compete due to the COVID-19 virus.
+        The virus impacted our team greatly, and we lost most of our sponsors. In 2020, we had an incredible robot
+        but were unable to finish the season to see the results. Ultimately, we lost a lot that could have been to COVID and struggled to recover.
+      </p>
+    </div>
+    <div class="flex flex-col items-center md:grid lg:grid-cols-2 gap-8 mb-10">
+      <Feature title="2022">
+        <p>
+          Our 2022 robot was designed for the FIRST Rapid React game.
+          Due to the lack of experience from many of the members, we did not do well
+          and did not make it past the regional events.
+        </p>
+      </Feature>
+      <!-- <div class="flex justify-center items-center">
+        <img class="max-h-96" height="" src="/5546/2022-bot.jpeg" />
+      </div> -->
+    </div>
+    <div class="mb-10">
+      <h2 class="mb-4 text-gradient w-max">Return of the 404</h2>
+      <p class="text-xl">
+        After the 2022 season, the team felt like it needed a reboot. We were able to get our old number 404 back,
+        and we worked to rebuild the team from scratch. We still, however, did not have many sponsors.
+      </p>
+    </div>
+    <div class="flex flex-col-reverse items-center md:grid lg:grid-cols-2 gap-8 mb-10">
+      <!-- <div class="flex justify-center items-center">
+        <img class="max-h-96" height="" src="/5546/2023-bot.jpeg" />
+      </div> -->
+      <Feature title="2023">
+        <p>
+          Our 2023 robot, Jerome Bot, was designed for the FIRST Charged Up game.
+          We again did not make it past the regional stage, but we won the <b>Gracious Professionalism Award</b>,
+          the second highest award FIRST has to offer.
+        </p>
+      </Feature>
     </div>
   </div>
 </DefaultLayout>
