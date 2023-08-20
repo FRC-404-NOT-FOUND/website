@@ -6,6 +6,11 @@ export const get: APIRoute = async ({ redirect, request }) => {
   if (!email) {
     return redirect('/');
   }
+  // TODO: Newsletter signup implementation
+  // Possibilities:
+  // - Google Sheets
+  // - Newsletter Service
+  // - Hacky stuff (Gmail API and loops with a dedicated email, SMTP, etc.)
   console.log(`${email} signed up for the newsletter`);
-  return redirect(`/newsletter-thank-you?email=${email}`);
+  return redirect(`/newsletter-thank-you?email=${email}`); // Email param "verifies"
 };
