@@ -683,10 +683,10 @@
   resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-6.1.8.tgz#2ca4a10892f5e2abeac0f8a8ecc8f07c002a4bf4"
   integrity sha512-kCZxQFKb9Vqa3CZRX0v7rMSJ2mlTt4gDpyLfiNJKxUAq7W51uKurPaFZWicaXy1ESHVBxKNlbx5uNjBpyu50JQ==
 
-"@fullcalendar/icalendar@^6.1.5":
+"@fullcalendar/google-calendar@^6.1.8":
   version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/icalendar/-/icalendar-6.1.8.tgz#5457638f4f764552f703e9f886ac0e663a7ebfb8"
-  integrity sha512-2Qklry51X4/VbTpEOQ+vuSDGa1AVi5TfMjD2q3hRAp4dX8zVL36Oi2iLdIGiFVHYWPUVZgu/BP3rR+pEX1Z0Jw==
+  resolved "https://registry.yarnpkg.com/@fullcalendar/google-calendar/-/google-calendar-6.1.8.tgz#4041c5cbc25ee3d289a121520e6f899b2e6a2ecf"
+  integrity sha512-G2khHQ9iwMzN36u+C6JsbjOC19ImVjf92GhXr4wpash9WlaBl6cA+lPrwH+ikfgI4tYnQLRBXCpxp/EQBlfiEQ==
 
 "@fullcalendar/react@^6.1.5":
   version "6.1.8"
@@ -3104,11 +3104,6 @@ hyphenate-style-name@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.4.tgz#691879af8e220aea5750e8827db4ef62a54e361d"
   integrity sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==
-
-ical.js@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/ical.js/-/ical.js-1.5.0.tgz#23213accd1d8f7248d01705acb06270a70d20662"
-  integrity sha512-7ZxMkogUkkaCx810yp0ZGKvq1ZpRgJeornPttpoxe6nYZ3NLesZe1wWMXDdwTkj/b5NtXT+Y16Aakph/ao98ZQ==
 
 ieee754@^1.2.1:
   version "1.2.1"
