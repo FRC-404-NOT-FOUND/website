@@ -1,4 +1,5 @@
 ---
+import Feature from '@components/Feature';
 import DefaultLayout from 'layouts/DefaultLayout.astro';
 
 export const prerender = true;
@@ -6,5 +7,24 @@ export const prerender = true;
 <DefaultLayout title="Our Robots">
   <div class="container">
     <h1 class="mb-8">Our Robots</h1>
+    <div class="flex flex-col-reverse items-center md:grid md:grid-cols-2 gap-8 mb-10">
+      <Feature title="Waste Management Bot">
+        <p>
+          Waste Management Bot was originally donated to our department by Waste Management as an old, broken, analog robot.
+          ARGS Alumnus and former Programming Captain, Sam Holliday, gave him a new life using an Arduino. He added color-changing LEDs for the eyes,
+          and new motors to help him move around and promote reusing and recycling.
+        </p>
+      </Feature>
+      <img width="1280" height="1663" alt="Waste management robot" src="/waste-management-bot.jpeg" class="rounded-lg w-auto h-full max-h-[22rem] m-auto" />
+    </div>
+    <div class="flex flex-col items-center md:grid md:grid-cols-2 gap-8 mb-10">
+      <img width="3072" height="480" alt="Waste management robot" src="/jeromebot.jpeg" class="rounded-lg w-auto h-full max-h-[22rem] m-auto" />
+      <Feature title="Jerome Bot">
+        <p>
+          Jerome Bot, named by ARGS Alumnus and former Build Captain Xavi Goodwin, was our 2023 robot. Designed for FIRST Charged Up,
+          he was built using a mecanum drivebase to move in every direction with an arm and grabber to manipulate objects around the field.
+        </p>
+      </Feature>
+    </div>
   </div>
 </DefaultLayout>
