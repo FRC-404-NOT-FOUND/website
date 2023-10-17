@@ -13,11 +13,15 @@ const ImageGallery = ({ images = [], prefix = '' }: { images?: string[], prefix?
       className="w-full h-full align-center bg-[var(--dark-100)]"
       navigation
       centeredSlides
+      loop
+      autoplay={{
+        delay: 2000,
+      }}
       slidesPerView="auto"
       pagination={{ clickable: true }}>
       {images.map((img) => (
-        <SwiperSlide key={img} className="w-full h-full">
-          <img loading="lazy" src={prefix + '/' + img} className="max-h-96 m-auto" />
+        <SwiperSlide key={img} className="w-full h-full flex items-center justify-center flex-col">
+          <img loading="lazy" src={prefix + '/' + img} className="max-h-96 m-auto flex items-center justify-center flex-col" />
         </SwiperSlide>
       ))}
     </Swiper>

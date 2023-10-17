@@ -31,12 +31,15 @@ const HomeParallax = () => {
       </ParallaxLayer>
       <ParallaxLayer offset={0.5} speed={2} sticky={{ start: 0.9, end: lg ? 5 : 1.5 }}>
         <Float>
-          <Feature icon={MdInfo} title="About Us">
-              <a href="/about" className="flex items-center">
-                Learn more about our team and school
-                <MdChevronRight size={16} className="p-0 react-icon" />
-              </a>
-          </Feature>
+          <div className="flex flex-col justify-between items-center gap-8">
+            <Feature icon={MdInfo} title="About Us">
+                <a href="/about" className="flex items-center">
+                  Learn more about our team and school
+                  <MdChevronRight size={16} className="p-0 react-icon" />
+                </a>
+            </Feature>
+            <img className="p-2" src="/hero.png" />
+          </div>
         </Float>
       </ParallaxLayer>
       <ParallaxLayer offset={1} speed={1} sticky={calculateStartEnd(lg, 1.5, 2)}>
@@ -79,7 +82,7 @@ const HomeParallax = () => {
           </Feature>
         </Float>
       </ParallaxLayer>
-      <ParallaxLayer offset={5} speed={1.5} sticky={calculateStartEnd(lg, 5.5, 6)}>
+      <ParallaxLayer offset={5} speed={1.5} sticky={calculateStartEnd(lg, 6, 7)}>
         <form action="/newsletter-signup" className="p-6 w-full flex flex-col gap-5 items-center justify-start">
           <label className="text-3xl font-bold text-gradient" htmlFor="newsletter">Sign up for our Newsletter</label>
           <div className="flex w-1/2 flex-row gap-3 items-center justify-center">
@@ -87,9 +90,7 @@ const HomeParallax = () => {
             <input className="button" type="submit" value="Sign Up" />
           </div>
         </form>
-      </ParallaxLayer>
-      <ParallaxLayer offset={5} speed={1} sticky={calculateStartEnd(lg, 6, 6.5)}>
-        <div className="h-full absolute bottom-0 top-[60%] left-0 right-0">
+        <div className="h-full absolute bottom-0 top-[40%] left-0 right-0">
           <Footer />
         </div>
       </ParallaxLayer>

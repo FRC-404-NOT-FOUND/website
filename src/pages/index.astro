@@ -1,6 +1,5 @@
 ---
 import DefaultLayout from 'layouts/DefaultLayout.astro';
-import StaticPage from 'components/StaticPage';
 import HomePage from 'components/HomePage';
 
 export const prerender = true;
@@ -8,7 +7,4 @@ export const prerender = true;
 
 <DefaultLayout noFooter title="Home">
   <HomePage client:media="(min-width: 1024px)" />
-  <noscript>
-    <StaticPage />
-  </noscript>
 </DefaultLayout>

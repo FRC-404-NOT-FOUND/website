@@ -1,4 +1,8 @@
-const Hero = ({ src = 'hero.png' }: { src?: string }) => {
+import { useMediaQuery } from 'react-responsive';
+
+const Hero = () => {
+  const dark = useMediaQuery({ query: '(prefers-color-scheme: dark)' });
+
   return (
     <section className="hero mb-24 mt-16 min-h-[80vh]">
       <div className="container">
@@ -8,7 +12,7 @@ const Hero = ({ src = 'hero.png' }: { src?: string }) => {
               <slot><span className="text-gradient">Team 404</span> Not Found</slot>
             </h1>
           </div>
-          <img src={src} alt="Images of our team" width="1600" height="900" decoding="async" />
+          <img src={dark ? '/logo-transparent.png' : 'logo.png'} alt="Images of our team" width="1600" height="900" decoding="async" />
         </div>
       </div>
     </section>

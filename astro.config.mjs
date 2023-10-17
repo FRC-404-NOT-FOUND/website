@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
-
+import million from 'million/compiler'
 import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
@@ -33,5 +33,8 @@ export default defineConfig({
   })],
   trailingSlash: 'ignore',
   output: 'server',
-  adapter: netlify()
+  adapter: netlify(),
+  vite: {
+    plugins: [million.vite({ auto: true, server: true, mode: 'react' })]
+  }
 });

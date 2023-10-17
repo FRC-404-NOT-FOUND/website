@@ -47,6 +47,7 @@
     "@react-spring/parallax": "^9.7.1",
     "accessible-astro-components": "^1.6.4",
     "astro-robots-txt": "^0.4.1",
+    "million": "^2.6.0-beta.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
